@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Profil</title>
+<link rel="stylesheet" href="css/style.css"/>
+<script defer src="js/app.js"></script>
+<script defer src="js/profile.js"></script>
+</head>
+<body>
+  <div class="page">
+    <div class="backbar"><button id="back" class="back-btn">← Kembali</button></div>
+    <h2 style="margin:4px 0 12px">Profil</h2>
+
+    <div class="section">
+      <div class="muted" style="margin-bottom:8px">Akun</div>
+      <div style="display:grid;gap:10px">
+        <label>UID: <span id="uid">-</span></label>
+        <label>Email: <span id="email">-</span></label>
+        <label>Nama:
+          <input id="name" placeholder="Nama" style="width:100%;padding:10px;border-radius:10px;border:none;background:rgba(255,255,255,.06);color:var(--text)"/>
+        </label>
+        <label>Telepon:
+          <input id="phone" placeholder="+62" style="width:100%;padding:10px;border-radius:10px;border:none;background:rgba(255,255,255,.06);color:var(--text)"/>
+        </label>
+        <div>KYC: <b id="kyc">-</b></div>
+        <div style="display:flex;gap:10px;justify-content:flex-end">
+          <button class="btn secondary" id="logout">Keluar</button>
+          <button class="btn" id="save">Simpan</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

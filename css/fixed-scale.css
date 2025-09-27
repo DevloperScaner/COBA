@@ -1,0 +1,58 @@
+
+/* fixed-scale.css — konsistenkan ukuran UI di semua page */
+:root{
+  --page-max-w: 420px;         /* lebar kanvas terkunci */
+  --page-pad: 16px;            /* padding sisi */
+}
+html{
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+/* Kunci konten ke lebar yang sama dan center */
+body{
+  margin:0;
+  background: #0f141a;
+}
+.page-wrap{
+  max-width: var(--page-max-w);
+  margin: 0 auto;
+  padding: 0 var(--page-pad) 80px; /* ruang untuk tabbar jika ada */
+  box-sizing: border-box;
+}
+
+/* Jika halaman sudah punya kontainer utama bernama main/section#app dsb, 
+   kita tidak memaksa markup baru — gunakan .page-wrap util sebagai pembungkus opsional.
+*/
+.container, .wrapper, main, #app, .app, .root{
+  box-sizing: border-box;
+}
+
+/* Tipografi baseline yang seragam */
+body, button, input, select, textarea{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  color:#e6edf3;
+}
+
+/* Responsive micro-tuning untuk HP kecil */
+@media (max-width: 360px){
+  :root{ --page-pad:12px; }
+  body{ font-size: 15px; }
+}
+@media (min-width: 361px) and (max-width: 480px){
+  body{ font-size: 16px; }
+}
+@media (min-width: 481px){
+  body{ font-size: 17px; }
+  /* di layar besar, center-kanvas dgn background samping */
+  body{
+    background: radial-gradient(1200px 600px at 50% -20%, #0b1220, #0f141a);
+  }
+}
+
+/* Utility untuk bar bawah agar rata tengah di viewport tapi tidak melewati kanvas */
+.tabbar, .bottom-nav, .navbar-bottom{
+  max-width: var(--page-max-w);
+  margin: 0 auto;
+}
+
+/* Hilangkan zoom pinch utk pengalaman app-like */

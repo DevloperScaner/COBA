@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id" class="dark">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Dashboard — Animals</title>
+<link rel="stylesheet" href="css/style.css"/>
+<script defer src="js/app.js"></script>
+<script defer src="js/home.js"></script>
+  <link rel="stylesheet" href="css/fixed-scale.css">
+</head>
+<body>
+  <div class="container">
+    <header class="topbar">
+      <div class="brand"><h1 id="title">PETERNAKAN HEWAN</h1></div>
+      <div class="top-actions">
+        <div class="icon-btn" data-action="notif" title="Notifikasi"><span style="font-size:20px">🔔</span><span class="badge"></span></div>
+        <div class="icon-btn" data-action="lang" title="Bahasa"><span style="font-size:20px">🌐</span></div>
+        <div class="icon-btn" data-action="theme" title="Tema"><span style="font-size:20px">🌙</span></div>
+      </div>
+    </header>
+
+    <section class="hero" id="hero">
+      <small id="hero-tag">Chicken</small>
+      <h2 id="hero-h2">Cashback 5%</h2>
+      <p id="hero-desc">Promo ayam khusus minggu ini.</p>
+      <div class="dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stat">
+        <h5 id="stats-total">Total Aset</h5>
+        <div class="val">Rp 0</div>
+      </div>
+      <div class="stat">
+        <h5 id="stats-quan">Akun Kuantitatif</h5>
+        <div class="val">Rp 0</div>
+      </div>
+      <div class="stat">
+        <h5 id="stats-active">Holding Aktif</h5>
+        <div class="val">0</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-header">
+        <h3 style="margin:0" id="menu-title">Menu</h3>
+        <div class="pager-dots">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+
+      <div class="grid-viewport">
+        <div class="grid-pages">
+          <!-- Page 1 -->
+          <div class="grid-page">
+            <a class="tile" href="withdraw.html"><img alt="" src="img/ico-card.svg"/><span>Menarik</span></a>
+            <a class="tile" href="contact.html"><img alt="" src="img/ico-chat.svg"/><span>Kontak</span></a>
+            <a class="tile" href="team.html"><img alt="" src="img/ico-team.svg"/><span>Tim</span></a>
+            <a class="tile" href="invite.html"><img alt="" src="img/ico-mail.svg"/><span>Mengundang</span></a>
+            <a class="tile" href="news.html"><img alt="" src="img/ico-news.svg"/><span>Berita</span></a>
+            <a class="tile" href="summary.html"><img alt="" src="img/ico-chart.svg"/><span>Ringkasan</span></a>
+            <a class="tile" href="tasks.html"><img alt="" src="img/ico-clipboard.svg"/><span>Pusat Tugas</span></a>
+            <a class="tile" href="farm.html"><img alt="" src="img/ico-cow.svg"/><span>Farm</span></a>
+            <a class="tile" href="profile.html"><img alt="" src="img/ico-user.svg"/><span>Aku</span></a>
+          </div>
+          <!-- Page 2 -->
+          <div class="grid-page">
+            <a class="tile" href="wallet.html"><img alt="" src="img/ico-wallet.svg"/><span>Dompet</span></a>
+            <a class="tile" href="admin.html"><img alt="" src="img/ico-tools.svg"/><span>Admin</span></a>
+            <a class="tile" href="help.html"><img alt="" src="img/ico-help.svg"/><span>Help</span></a>
+            <a class="tile" href="about.html"><img alt="" src="img/ico-info.svg"/><span>Tentang</span></a>
+            <a class="tile" href="rate.html"><img alt="" src="img/ico-star.svg"/><span>Rate</span></a>
+            <a class="tile" href="support.html"><img alt="" src="img/ico-support.svg"/><span>Bahasa</span></a>
+            <a class="tile" href="theme.html"><img alt="" src="img/ico-moon.svg"/><span>Tema</span></a>
+            <a class="tile" href="notifications.html"><img alt="" src="img/ico-bell.svg"/><span>Notifikasi</span></a>
+            <a class="tile" href="support.html"><img alt="" src="img/ico-life.svg"/><span>Lainnya</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <nav class="tabbar">
+    <a class="tab active" href="index.html"><img src="img/ico-home.svg" alt=""/><span>Rumah</span></a>
+    <a class="tab" href="farm.html"><img src="img/ico-cow.svg" alt=""/><span>Farm</span></a>
+    <a class="tab" href="invite.html"><img src="img/ico-hand.svg" alt=""/><span>Mengundang</span></a>
+    <a class="tab" href="profile.html"><img src="img/ico-user.svg" alt=""/><span>Aku</span></a>
+  </nav>
+
+  <!-- Modals -->
+  <div class="modal" id="notif-modal">
+    <div class="sheet">
+      <h3>Notifikasi</h3>
+      <ul id="notif-list" style="list-style:none;padding:0;margin:0"></ul>
+      <div class="footer"><button class="btn secondary close-modal">Tutup</button></div>
+    </div>
+  </div>
+
+  <div class="modal" id="lang-modal">
+    <div class="sheet">
+      <h3>Pilih bahasa</h3>
+      <div class="row">
+        <div class="pill" data-lang="id">Indonesia</div>
+        <div class="pill" data-lang="en">English</div>
+      </div>
+      <div class="footer"><button class="btn secondary close-modal">Tutup</button></div>
+    </div>
+  </div>
+
+  <div class="modal" id="theme-modal">
+    <div class="sheet">
+      <h3>Tema</h3>
+      <div class="row">
+        <button class="btn" id="set-dark">Dark</button>
+        <button class="btn secondary" id="set-light">Light</button>
+      </div>
+      <div class="footer"><button class="btn secondary close-modal">Tutup</button></div>
+    </div>
+  </div>
+  <script src="js/lockScale.js"></script>
+</body>
+</html>
